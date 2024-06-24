@@ -1,0 +1,21 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "cwd":"${workspaceFolder}",
+      "program": "${file}",
+    //   "preLaunchTask": "venv",
+      "python": "/opt/git/isaacgym/python/test/venv/bin/python",
+      "console": "integratedTerminal",
+      "purpose": ["debug-in-terminal"],
+      "args": ["--task=pai_ppo", "--run_name","v1", "--num_envs", "1" ],
+      "env":{"PYTHONPATH":"${workspaceFolder}/test/venv/lib"},
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "cmake.configureOnOpen": false,
+    "python.analysis.indexing": true,
+    "python.analysis.autoImportCompletions": true,
+}
