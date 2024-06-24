@@ -43,12 +43,22 @@ def _do_setup():
           install_requires = [
               "torch>=1.8.0",
               "torchvision>=0.9.0",
-              "numpy>=1.16.4",
+            #   "numpy>=1.16.4",
               "scipy>=1.5.0",
               "pyyaml>=5.3.1",
               "pillow",
               "imageio",
               "ninja",
+
+            #   'isaacgym',  # preview4
+              'wandb',
+              'tensorboard',
+              'tqdm',
+              'numpy==1.21.1',
+              'opencv-python',
+              'mujoco==2.3.6',
+              'mujoco-python-viewer',
+              'matplotlib'
           ],
          )
 
