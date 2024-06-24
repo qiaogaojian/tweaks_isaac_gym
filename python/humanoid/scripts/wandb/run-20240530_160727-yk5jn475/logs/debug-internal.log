@@ -1,0 +1,53 @@
+2024-05-30 16:07:27,784 INFO    StreamThr :10712 [internal.py:wandb_internal():85] W&B internal server running at pid: 10712, started at: 2024-05-30 16:07:27.782255
+2024-05-30 16:07:27,787 DEBUG   HandlerThread:10712 [handler.py:handle_request():158] handle_request: status
+2024-05-30 16:07:27,792 INFO    WriterThread:10712 [datastore.py:open_for_write():87] open: /opt/git/livelybot_rl_control/humanoid/scripts/wandb/run-20240530_160727-yk5jn475/run-yk5jn475.wandb
+2024-05-30 16:07:27,793 DEBUG   SenderThread:10712 [sender.py:send():378] send: header
+2024-05-30 16:07:27,824 DEBUG   SenderThread:10712 [sender.py:send():378] send: run
+2024-05-30 16:07:28,655 INFO    SenderThread:10712 [dir_watcher.py:__init__():211] watching files in: /opt/git/livelybot_rl_control/humanoid/scripts/wandb/run-20240530_160727-yk5jn475/files
+2024-05-30 16:07:28,655 INFO    SenderThread:10712 [sender.py:_start_run_threads():1123] run started: yk5jn475 with start time 1717056447.781256
+2024-05-30 16:07:28,663 DEBUG   HandlerThread:10712 [handler.py:handle_request():158] handle_request: check_version
+2024-05-30 16:07:28,663 DEBUG   SenderThread:10712 [sender.py:send_request():405] send_request: check_version
+2024-05-30 16:07:30,176 DEBUG   HandlerThread:10712 [handler.py:handle_request():158] handle_request: run_start
+2024-05-30 16:07:30,190 DEBUG   HandlerThread:10712 [system_info.py:__init__():26] System info init
+2024-05-30 16:07:30,190 DEBUG   HandlerThread:10712 [system_info.py:__init__():41] System info init done
+2024-05-30 16:07:30,190 INFO    HandlerThread:10712 [system_monitor.py:start():194] Starting system monitor
+2024-05-30 16:07:30,190 INFO    SystemMonitor:10712 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-30 16:07:30,191 INFO    HandlerThread:10712 [system_monitor.py:probe():214] Collecting system info
+2024-05-30 16:07:30,192 INFO    SystemMonitor:10712 [interfaces.py:start():188] Started cpu monitoring
+2024-05-30 16:07:30,193 INFO    SystemMonitor:10712 [interfaces.py:start():188] Started disk monitoring
+2024-05-30 16:07:30,195 INFO    SystemMonitor:10712 [interfaces.py:start():188] Started gpu monitoring
+2024-05-30 16:07:30,196 INFO    SystemMonitor:10712 [interfaces.py:start():188] Started memory monitoring
+2024-05-30 16:07:30,197 INFO    SystemMonitor:10712 [interfaces.py:start():188] Started network monitoring
+2024-05-30 16:07:30,663 INFO    WriterThread:10712 [datastore.py:close():296] close: /opt/git/livelybot_rl_control/humanoid/scripts/wandb/run-20240530_160727-yk5jn475/run-yk5jn475.wandb
+2024-05-30 16:07:31,171 INFO    SenderThread:10712 [sender.py:finish():1545] shutting down sender
+2024-05-30 16:07:31,171 INFO    SenderThread:10712 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-30 16:07:31,656 INFO    SenderThread:10712 [dir_watcher.py:finish():388] scan: /opt/git/livelybot_rl_control/humanoid/scripts/wandb/run-20240530_160727-yk5jn475/files
+2024-05-30 16:07:31,656 INFO    SenderThread:10712 [dir_watcher.py:finish():402] scan save: /opt/git/livelybot_rl_control/humanoid/scripts/wandb/run-20240530_160727-yk5jn475/files/config.yaml config.yaml
+2024-05-30 16:07:31,656 INFO    SenderThread:10712 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-30 16:07:31,656 INFO    SenderThread:10712 [file_pusher.py:join():175] waiting for file pusher
+2024-05-30 16:07:32,725 INFO    wandb-upload_0:10712 [upload_job.py:push():130] Uploaded file /opt/git/livelybot_rl_control/humanoid/scripts/wandb/run-20240530_160727-yk5jn475/files/config.yaml
+2024-05-30 16:07:33,158 INFO    SenderThread:10712 [file_stream.py:finish():601] file stream finish called
+2024-05-30 16:07:33,627 INFO    SenderThread:10712 [file_stream.py:finish():605] file stream finish is done
+2024-05-30 16:07:33,627 ERROR   StreamThr :10712 [internal.py:wandb_internal():173] Thread HandlerThread:
+Traceback (most recent call last):
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/handler.py", line 160, in handle_request
+    handler(record)
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/handler.py", line 702, in handle_request_run_start
+    self._system_monitor.probe(publish=True)
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/system/system_monitor.py", line 217, in probe
+    k: v for d in [asset.probe() for asset in self.assets] for k, v in d.items()
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/system/system_monitor.py", line 217, in <listcomp>
+    k: v for d in [asset.probe() for asset in self.assets] for k, v in d.items()
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/sdk/internal/system/assets/gpu.py", line 395, in probe
+    info["gpu"] = pynvml.nvmlDeviceGetName(pynvml.nvmlDeviceGetHandleByIndex(0))  # type: ignore
+  File "/opt/git/livelybot_rl_control/venv/lib/python3.8/site-packages/wandb/vendor/pynvml/pynvml.py", line 1962, in wrapper
+    return res.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf8 in position 0: invalid start byte
