@@ -1,2 +1,3 @@
 ﻿python/isaacgym/__pycache__
 *.log
+*.pyc
