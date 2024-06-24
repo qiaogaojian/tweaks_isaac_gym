@@ -29,7 +29,6 @@
 #
 # Copyright (c) 2024 Beijing RobotEra TECHNOLOGY CO.,LTD. All rights reserved.
 
-
 from humanoid import LEGGED_GYM_ROOT_DIR, LEGGED_GYM_ENVS_DIR
 from .base.legged_robot import LeggedRobot
 
@@ -39,10 +38,6 @@ from .pai.pai_env import PaiFreeEnv
 from .pai2.pai2_config import Pai2Cfg, Pai2CfgPPO
 from .pai2.pai2_env import Pai2FreeEnv
 
-from .pai_p1.pai_p1_config import PaiP1Cfg, PaiP1CfgPPO
-from .pai_p1.pai_p1_env import PaiP1FreeEnv
-
 from humanoid.utils.task_registry import task_registry
 task_registry.register( "pai_ppo", PaiFreeEnv, PaiCfg(), PaiCfgPPO() )
 task_registry.register( "pai2_ppo", Pai2FreeEnv, Pai2Cfg(), Pai2CfgPPO() )
-task_registry.register( "paip1_ppo", PaiP1FreeEnv, PaiP1Cfg(), PaiP1CfgPPO() )
