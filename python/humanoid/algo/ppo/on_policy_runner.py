@@ -95,12 +95,12 @@ class OnPolicyRunner:
         # initialize writer
         if self.log_dir is not None and self.writer is None:
             # 使用 TensorBoard 代替 wandb
-            wandb.init(
-                project="Pai",
-                sync_tensorboard=True,
-                name=self.wandb_run_name,
-                config=self.all_cfg,
-            )
+            # wandb.init(
+            #     project="Pai",
+            #     sync_tensorboard=True,
+            #     name=self.wandb_run_name,
+            #     config=self.all_cfg,
+            # )
             self.writer = SummaryWriter(log_dir=self.log_dir, flush_secs=10)
         if init_at_random_ep_len:
             self.env.episode_length_buf = torch.randint_like(
