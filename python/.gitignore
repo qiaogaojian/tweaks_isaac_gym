@@ -1,2 +1,14 @@
-venv/
 isaacgym.egg-info/
+.idea/
+venv/
+logs/
+log/
+*.pyc
+__pycache___
+__pycache__/
+wandb/
+test/isaacgym/
+*.mp4
+logs/
+build
+MUJOCO_LOG.TXT
