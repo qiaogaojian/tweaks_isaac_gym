@@ -49,15 +49,16 @@ def read(args):
         env.commands[:, 1] = 0.0
         env.commands[:, 2] = 0.0
         env.commands[:, 3] = 0.0
-    action = torch.Tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]).to(device)
-    action = action.unsqueeze(0)
 
-    idle_step = 1
-    while idle_step < 320:
-        env.play(action.detach())
+    # action = torch.Tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]).to(device)
+    # action = action.unsqueeze(0)
 
-        idle_step += 1
-        matplot_logger.log_states({"target": action[0].cpu().numpy() * env.cfg.control.action_scale, "gym_dof_pos": env.dof_pos[0].cpu().numpy(), "gym_dof_vel": env.dof_vel[0].cpu().numpy(), "gym_torques": env.torques[0].cpu().numpy(), "gym_command": env.commands[0].cpu().numpy(), "gym_base_line_vel": env.base_lin_vel[0].cpu().numpy(), "gym_base_ang_vel": env.base_ang_vel[0].cpu().numpy(), "gym_contact_forces_z": env.contact_forces[0, env.feet_indices, 2].cpu().numpy()})
+    # idle_step = 1
+    # while idle_step < 320:
+    #     env.play(action.detach())
+
+    #     idle_step += 1
+    #     matplot_logger.log_states({"target": action[0].cpu().numpy() * env.cfg.control.action_scale, "gym_dof_pos": env.dof_pos[0].cpu().numpy(), "gym_dof_vel": env.dof_vel[0].cpu().numpy(), "gym_torques": env.torques[0].cpu().numpy(), "gym_command": env.commands[0].cpu().numpy(), "gym_base_line_vel": env.base_lin_vel[0].cpu().numpy(), "gym_base_ang_vel": env.base_ang_vel[0].cpu().numpy(), "gym_contact_forces_z": env.contact_forces[0, env.feet_indices, 2].cpu().numpy()})
 
     gym_step = 0
     while gym_step < 540:
