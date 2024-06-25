@@ -236,8 +236,8 @@ class MatplotLogger:
         # plt.show()
 
         time_str = datetime.now().strftime('%m%d_%H-%M-%S')
-        png_file = FileUtils.get_project_path() + f"/videos/Pai_ppo/benchmark_{self.png_name}_{time_str}.png"
-        log_file = FileUtils.get_project_path() + f"/videos/Pai_ppo/benchmark_{self.png_name}_{time_str}.log"
+        png_file = FileUtils.get_project_path() + f"videos/Pai_ppo/benchmark_{self.png_name}_{time_str}.png"
+        log_file = FileUtils.get_project_path() + f"videos/Pai_ppo/benchmark_{self.png_name}_{time_str}.log"
         self.print_rate_log(log_file)
         # 保存图像到文件
         plt.savefig(png_file)
