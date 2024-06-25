@@ -11,7 +11,7 @@
       "cwd":"${workspaceFolder}",
       "program": "${file}",
     //   "preLaunchTask": "venv",
-      "python": "/opt/git/isaacgym/python/venv/bin/python",
+      "python": "${workspaceFolder}/venv/bin/python",
       "console": "integratedTerminal",
       "purpose": ["debug-in-terminal"],
       "args": ["--task=pai_ppo", "--run_name","v1", "--num_envs", "1" ],
